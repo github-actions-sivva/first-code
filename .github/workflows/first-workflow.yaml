@@ -11,3 +11,10 @@ jobs:
         node -v
         npm -v
         hostname -i
+  second-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo "build!!!!"
+      - name: scan
+        run: ech0 "scan!!!!"
