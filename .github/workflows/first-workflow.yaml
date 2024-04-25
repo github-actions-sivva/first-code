@@ -1,20 +1,20 @@
-name: First Work Flow 
-on: [push]
+name:  First-WorkFlow
+on: push
 jobs:
-  run-shell-commands:
+  first-job:
     runs-on: ubuntu-latest
     steps:
-    - name: echo a string
-      run:  echo "Hello World!!!!"
-    - name: Multi Line Command
-      run: |
-        node -v
-        npm -v
-        hostname -i
-  second-command:
+      - name: Build
+        run: echo "Building the app!!!!"
+      - name: Test
+        run: echo "Testing the app!!!!"
+      - name: Multi Line Command
+        run: |
+          npm -v
+          node -v
+  second-job:
     runs-on: ubuntu-latest
     steps:
-      - name: build
-        run: echo "build!!!!"
-      - name: scan
-        run: ech0 "scan!!!!"
+      - name: Docker
+        run: echo "Docker Build!!!!"
+
