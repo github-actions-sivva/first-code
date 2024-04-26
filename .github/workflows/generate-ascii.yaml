@@ -16,3 +16,8 @@ jobs:
         run: cat dragon.txt
       - name: list repo file
         run: ls -la
+  build_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker Build
+        run: echo "Building docker image"
