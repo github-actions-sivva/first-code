@@ -10,3 +10,8 @@ jobs:
         run: chmod +x ascii.sh
       - name: Executing Schell Script 
         run: ./ascii.sh
+    #   - name: Change and Execute Script
+    #     run: |
+    #       chmod +x ascii.sh
+    #       ./ascii.sh
+    # ctrl+/
