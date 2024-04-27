@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: Checkout REPO
         uses: actions/checkout@v4
+      - name: Changing Permissions
+        run: chmod +x ascii.sh
       - name: Executing Schell Script 
         run: ./ascii.sh
