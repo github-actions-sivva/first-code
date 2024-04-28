@@ -1,8 +1,9 @@
-name: Events Work Flow
-run-name: ${{ github.actor}} is Learning Events 
+name: Events Work Flow 
 on: [push, pull_request, issues]
 jobs:
   checkout-test:
+    name: |
+     Run by ${{ github.actor }} on commit ${{ github.sha }} in branch ${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: General Step
@@ -11,4 +12,3 @@ jobs:
           echo $GITHUB_REF
       - name: Checkout the repo 
         uses: actions/checkout@v4
-        
