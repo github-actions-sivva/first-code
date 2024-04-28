@@ -1,0 +1,29 @@
+name: Working Dir and Shells
+on: push
+jobs:
+  display-wd-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Displaying Working Directory and list files
+        run: |
+          echo "********* Displaying the Present Working Directory *********"
+          pwd
+          echo "********* Displaying the List of file *********"
+          ls -la
+          echo "********* Printing few default env variables *********"
+          echo $GITHUB_SHA
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_REPOSITORY
+  display-wd-info-windows:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Displaying Working Directory and list files
+            run: |
+                echo "********* Displaying the Present Working Directory *********"
+                pwd
+                echo "********* Displaying the List of file *********"
+                ls -la
+                echo "********* Printing few default env variables *********"
+                echo $GITHUB_SHA
+                echo $GITHUB_WORKSPACE
+                echo $GITHUB_REPOSITORY
