@@ -1,6 +1,6 @@
 name: Simple Action
 on: push
-run-name: ${{ github.actor}} is learning github actions
+run-name: ${{ github.actor }} is learning github actions
 jobs:
   simple-action:
     runs-on: ubuntu-latest
