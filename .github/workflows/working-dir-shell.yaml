@@ -15,7 +15,7 @@ jobs:
           echo $GITHUB_WORKSPACE
           echo $GITHUB_REPOSITORY
   display-wd-info-windows:
-    runs-on: ubuntu-latest
+    runs-on:  windows-latest
     steps:
     - name: Displaying Working Directory and list files
       run: |
