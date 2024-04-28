@@ -19,6 +19,9 @@ jobs:
           echo $GITHUB_WORKSPACE
           echo $GITHUB_REPOSITORY
   display-wd-info-windows:
+    defaults:
+      run:
+        shell: pwsh
     runs-on:  windows-latest
     steps:
     - name: Displaying Working Directory and list files
@@ -38,3 +41,6 @@ jobs:
     #     echo $GITHUB_SHA
     #     echo $GITHUB_WORKSPACE
     #     echo $GITHUB_REPOSITORY
+    - name: Run Python command
+      run: print('Hello, GitHub Actions!')
+  
