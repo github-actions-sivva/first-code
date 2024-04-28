@@ -43,4 +43,5 @@ jobs:
     #     echo $GITHUB_REPOSITORY
     - name: Run Python command
       run: print('Hello, GitHub Actions!')
+      shell: python
   
