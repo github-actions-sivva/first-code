@@ -1,0 +1,21 @@
+name: Event Activity WF
+#on: [push, pull_request, issues]
+#run-name: Run by ${{ github.actor }} on commit ${{ github.sha }} in branch ${{ github.ref }}
+on:
+  push: 
+    # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+  pull_request: 
+    types: [opened, assigned, reopened, synchronize]  
+  issues: 
+    types: [opened]
+run-name: Run by ${{ github.actor }} in branch ${{ github.ref }}
+jobs:
+  checkout-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: General Step
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REF
+      - name: Checkout the repo 
+        uses: actions/checkout@v4
