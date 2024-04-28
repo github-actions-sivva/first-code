@@ -22,6 +22,8 @@ jobs:
             name: my-artifact
             path: dragon.txt
           name: Downloading artifact
+        - name: list file in the build
+          run: ls -la
         - name: Test file exists
           run: grep -i "dragon" dragon.txt
 
