@@ -8,6 +8,8 @@ jobs:
         run: sudo apt-get install cowsay -y
       - name: Execute Cowsay Command
         run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+      - name: list file in the build
+        run: ls -la
       - name: Upload Dragon Text file
         uses: actions/upload-artifact@v4
         with:
@@ -22,7 +24,7 @@ jobs:
             name: my-artifact
             path: dragon.txt
           name: Downloading artifact
-        - name: list file in the build
+        - name: list file in the test job
           run: ls -la
         - name: Test file exists
           run: grep -i "dragon" dragon.txt
