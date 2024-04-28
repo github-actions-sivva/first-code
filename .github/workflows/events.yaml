@@ -1,6 +1,6 @@
 name: Events Work Flow 
 on: [push, pull_request, issues]
-run-name: Run by ${{ github.actor }} on commit ${{ github.sha }} in branch ${{ github.ref }}
+run-name: Run by ${{ github.actor }} on commit ${{ github.sha | slice(0,8) }} in branch ${{ github.ref }}
 jobs:
   checkout-test:
     runs-on: ubuntu-latest
