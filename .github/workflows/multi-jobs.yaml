@@ -25,3 +25,8 @@ jobs:
         run: cat dragon.txt
       - name: Deploying
         run: echo Deploying!!!!
+
+# 3 jobs run in parallel, and no job will wait for other jobs 
+
+# we want build job to be executed first, followed by other 2 jobs 
+# but there is not guarentty that build job will execute first. 
