@@ -1,4 +1,4 @@
-name: Checkout 
+name: Checkout Action WF 
 on: push
 jobs:
   checkout-and-display-files:
