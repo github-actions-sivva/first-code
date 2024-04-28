@@ -1,4 +1,4 @@
-name: Checkout 
+name: Checkout Git WF
 on: push
 jobs:
   checkout-and-display-files:
