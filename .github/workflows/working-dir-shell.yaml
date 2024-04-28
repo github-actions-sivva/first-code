@@ -19,11 +19,18 @@ jobs:
     steps:
     - name: Displaying Working Directory and list files
       run: |
-        echo "********* Displaying the Present Working Directory *********"
-        pwd
-        echo "********* Displaying the List of file *********"
-        ls -la
-        echo "********* Printing few default env variables *********"
-        echo $GITHUB_SHA
-        echo $GITHUB_WORKSPACE
-        echo $GITHUB_REPOSITORY
+        Get-Location
+        dir
+        echo $env:GITHUB_SHA
+        echo $env:GITHUB_REPOSITORY
+        echo $env:GITHUB_WORKSPACE
+    # - name: Displaying Working Directory and list files
+    #   run: |
+    #     echo "********* Displaying the Present Working Directory *********"
+    #     pwd
+    #     echo "********* Displaying the List of file *********"
+    #     ls -la
+    #     echo "********* Printing few default env variables *********"
+    #     echo $GITHUB_SHA
+    #     echo $GITHUB_WORKSPACE
+    #     echo $GITHUB_REPOSITORY
