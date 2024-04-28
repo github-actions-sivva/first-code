@@ -1,0 +1,13 @@
+name: Second Worflow
+on: 
+  workflow_run: 
+    workflows: [Initial Work flow]
+    types: 
+    - completed
+jobs:
+  Scans-Job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo " I was triggered because 'Initial Work flow' is completed"
+      - name: Scanning the app
+        run: echo "Scanning the application"
