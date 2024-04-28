@@ -1,5 +1,9 @@
 name: Working Dir and Shells
 on: push
+defaults:
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell
+  run:
+    shell: bash
 jobs:
   display-wd-info:
     runs-on: ubuntu-latest
