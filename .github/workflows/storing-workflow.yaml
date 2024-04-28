@@ -22,7 +22,9 @@ jobs:
         - uses: actions/download-artifact@v4
           with: 
             name: my-artifact
-            path: dragon.txt
+            # path is not needed as its a file. 
+            # if you give a file, it will be downloading as a folder, below is the fialure example
+            #drwxr-xr-x 2 runner docker 4096 Apr 28 01:42 dragon.txt
           name: Downloading artifact
         - name: list file in the test job
           run: ls -la
@@ -36,6 +38,5 @@ jobs:
         - uses: actions/download-artifact@v4
           with: 
             name: my-artifact
-            path: dragon.txt
           name: Downloading artifact
   
