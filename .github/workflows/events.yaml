@@ -1,9 +1,8 @@
 name: Events Work Flow 
 on: [push, pull_request, issues]
+run-name: Run by ${{ github.actor }} on commit ${{ github.sha }} in branch ${{ github.ref }}
 jobs:
   checkout-test:
-    name: |
-     Run by ${{ github.actor }} on commit ${{ github.sha }} in branch ${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: General Step
