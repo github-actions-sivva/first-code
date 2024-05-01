@@ -3,7 +3,7 @@
     # job level
     # workflow level
 # Inorder to access Org, Repo variables the syntax is ${{ vars.ENV_VARIABLE}}
-name: Exploring Vars and Secrets
+name: Workflow May
 on:
   workflow_dispatch:  
 #   schedule:
