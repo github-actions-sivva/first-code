@@ -39,10 +39,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Deploy
-          run: echo docker run -d -p 8080:80 ${{ env.CONTAINER_REGISTRY }}/${{ env.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest 
-    Echo-Envs:
-        needs: Docker-Deploy
-        runs-on: ubuntu-latest
-        steps:
-          - name: Echoing Env Variables
-            run: echo ${{ vars.ENV_VARIABLE }}
+          run: |
+            echo docker run -d -p 8080:80 ${{ env.CONTAINER_REGISTRY }}/${{ env.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest 
+            sleep 120s
