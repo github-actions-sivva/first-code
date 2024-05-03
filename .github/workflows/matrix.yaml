@@ -1,0 +1,14 @@
+name: Matrix Base WorkFlow
+on: push
+jobs:
+  deploy:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04, windows-latest]
+        image: [hello-world, apline]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Echo Docker Details
+      run: docker info
+    - name: Create a container with ${{ matrix.image }} 
+      run: docker run ${{ matrix.image }}
