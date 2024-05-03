@@ -1,5 +1,10 @@
 name: Default Branch Workflow
-on: push
+on:
+  push:
+    branches-ignore:
+      - '**'
+    branches:
+      - $default-branch
 jobs:
   build:
     runs-on: ubuntu-latest  
